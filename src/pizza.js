@@ -58,7 +58,7 @@
 		chef.drawPieSlice = function(degrees, offsetDegrees, color) {
 			var centerX = Math.floor(crust.width / 2),
 				centerY = Math.floor(crust.height / 2),
-				radius = centerX,
+				radius = centerX >= centerY ? centerY : centerX,
 				arcSize = degreesToRadians(degrees),
 				sliceStart = degreesToRadians(offsetDegrees),
 				sliceEnd = arcSize + sliceStart;
