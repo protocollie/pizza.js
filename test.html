@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>pizza.js test</title>
+		<script type="text/javascript" src="src/pizza.js"></script>
+	</head>
+	<body>
+		Let's make some pizza.<br/>
+		<canvas id="test-canvas" width="400" height="400"></canvas>
+		<script type="text/javascript">
+			(function() {
+
+				var myPizza = new pizza();
+
+				// Set the pizza's crust!
+				myPizza
+					.crust('test-canvas')
+					.slices([100, 500, 40, 29, 123, 29, 48, 299, 28, 287, 288])
+					.deliver();
+
+			})();
+		</script>
+	</body>
+</html>
